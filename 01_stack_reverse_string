@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _01_stack_reverse_string
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Read a Line from the Console
+            string input = Console.ReadLine();
+            Stack<char> reversedString = new Stack<char>();
+            foreach (var item in input)
+            {
+                reversedString.Push(item);
+
+            }
+            // Print and remove each element from the stack
+            while(reversedString.Count > 0)
+            {
+                Console.Write(reversedString.Pop());
+            }
+
+        }
+    }
+}
