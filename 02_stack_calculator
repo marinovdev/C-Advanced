@@ -1,0 +1,39 @@
+using System;
+using System.Collections;
+//using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _02_stack_calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] input = Console.ReadLine().Split(' ');
+            Stack<string> stackNumbers = new Stack<string>();
+            foreach (var item in input)
+            {
+                stackNumbers.Push(item.ToString());
+            }
+            stackNumbers = new Stack<string> (stackNumbers);
+            while (stackNumbers.Count > 1)
+            {
+                int firstNumber = int.Parse(stackNumbers.Pop());
+                string operand = stackNumbers.Pop();
+                int secoundNumber = int.Parse(stackNumbers.Pop());
+                
+                switch(operand)
+                {
+                    case "+":
+                        stackNumbers.Push(Convert.ToString(firstNumber + secoundNumber));
+                        break;
+                    case "-":
+                        stackNumbers.Push(Convert.ToString(firstNumber - secoundNumber));
+                        break;
+                }
+            }
+            Console.WriteLine(stackNumbers.Pop());
+        }
+    }
+}
