@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+
+namespace _03_decimal_to_binary_conversion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int input = int.Parse(Console.ReadLine());
+            Stack<int> binaryNumber = new Stack<int>();
+            while (input >= 0)
+            {
+                int result;
+                if (input == 0)
+                {
+                    result = 0;
+                    binaryNumber.Push(result);
+                    break;
+                }
+                else if(input == 1)
+                {
+                    result = 1;
+                    binaryNumber.Push(result);
+                    break;
+                }
+                else
+                {
+                    result = input % 2;
+                    binaryNumber.Push(result);
+                    input = Convert.ToInt32(Math.Floor((double)input / 2));
+                }
+            }
+            foreach (var item in binaryNumber)
+            {
+                Console.Write(item);
+            }
+        }
+    }
+}
