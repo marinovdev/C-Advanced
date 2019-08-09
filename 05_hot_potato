@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+
+namespace _05_hot_potato
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] kidsInput = Console.ReadLine().Split(' ');
+            int removeTheNthKid = Convert.ToInt32(Console.ReadLine());
+            Queue<string> kidsQue = new Queue<string>(kidsInput);
+            while(kidsQue.Count > 1)
+            {
+                for (int i = 1; i <= removeTheNthKid; i++)
+                {
+                    if(i  == removeTheNthKid)
+                    {
+                        string removed = kidsQue.Dequeue();
+                        Console.WriteLine($"Removed {removed}");
+                    }
+                    else
+                    {
+                        string tempValue = kidsQue.Dequeue();
+                        kidsQue.Enqueue(tempValue);
+                    }
+                }
+            }
+            Console.WriteLine($"Last is {kidsQue.Dequeue()}");
+        }
+    }
+}
