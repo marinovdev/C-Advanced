@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _06_traffic_light
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int nCarsPassed = 0;
+            int nCarsCanPass = int.Parse(Console.ReadLine());
+            Queue<string> carsOnQue = new Queue<string>();
+            string input = string.Empty;
+            while((input = Console.ReadLine()) != "end")
+            {
+                if(input == "green")
+                {
+                    for (int i = 1; i <= nCarsCanPass; i++)
+                    {
+                        if (carsOnQue.Count > 0)
+                        {
+                            Console.WriteLine($"{carsOnQue.Dequeue()} passed!");
+                            nCarsPassed++;
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    carsOnQue.Enqueue(input);
+                }
+            }
+            Console.WriteLine($"{nCarsPassed} cars passed the crossroads.");
+        }
+    }
+}
