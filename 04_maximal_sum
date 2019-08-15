@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _04_maximal_sum
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] rowsAndCols = Console.ReadLine()
+                .Split(' ')
+                .Select(x => int.Parse(x))
+                .ToArray();
+            int[,] numbers = new int[rowsAndCols[0], rowsAndCols[1]];
+            //Read and add the values to the array
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                int[] temp = Console.ReadLine()
+                    .Split(' ')
+                    .Select(x => int.Parse(x))
+                    .ToArray();
+                for (int b = 0; b < numbers.GetLength(1); b++)
+                {
+                    numbers[i, b] = temp[b];
+                }
+            }
+            //Check the array for the biggest 3x3 pattern in terms of value
+            int[] currentBiggestSquareIndex = new int[2];
+            int currentBiggestSquareValue = int.MinValue;
+            for (int a = 0; a < numbers.GetLength(0); a++)
+            {
+                for (int b = 0; b < numbers.GetLength(1); b++)
+                {
+                    if(a + 2 < numbers.GetLength(0) && b + 2 < numbers.GetLength(1))
+                    {
+                        int[] currentSelectionIndex = new int[] { a, b };
+                        int currentSelectionValue = 0;
+                        CalculateCurrentSelection(numbers, a, b, ref currentSelectionValue);
+                        if(currentSelectionValue > currentBiggestSquareValue)
+                        {
+                            currentBiggestSquareIndex = currentSelectionIndex;
+                            currentBiggestSquareValue = currentSelectionValue;
+                        }
+
+                    }
+                }
+            }
+            //Print result
+            Console.WriteLine($"Sum = {0}", currentBiggestSquareValue);
+            for (int i = currentBiggestSquareIndex[0]; i < currentBiggestSquareIndex[0] + 3; i++)
+            {
+                for (int f = currentBiggestSquareIndex[1]; f < currentBiggestSquareIndex[1] + 3; f++)
+                {
+                    Console.Write(numbers[i,f] + " ");
+                }
+                Console.WriteLine();
+            }
+
+        }
+        public static void CalculateCurrentSelection(int[,] numbers, int a, int b, ref int currentSelectionValue)
+        {
+            for (int x = 0; x < 3; x++)
+            {
+                for (int y = 0; y < 3; y++)
+                {
+                    currentSelectionValue += numbers[a + x, b + y];
+                }
+            }
+        }
+    }
+}
