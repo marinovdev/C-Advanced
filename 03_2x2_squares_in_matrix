@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _03_2x2_squares_in_matrix
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] nLines = Console.ReadLine()
+                .Split(' ')
+                .Select(x => int.Parse(x))
+                .ToArray();
+            int counter1 = nLines[0];
+            int counter2 = nLines[1];
+            string[,] values = new string[counter1, counter2];
+            //read from the console numbers and add them to array
+            for (int i = 0; i < counter1; i++)
+            {
+                string[] temp = Console.ReadLine().Split(' ');
+                for (int x = 0; x < temp.Length; x++)
+                {
+                    values[i, x] = temp[x];
+                }
+            }
+            //Check the content of the multi-dimennsional array for squares
+            int squares = 0;
+            for (int i = 0; i < values.GetLength(0); i++)
+            {
+                for (int x = 0; x < values.GetLength(1); x++)
+                {
+                    if(i + 1 < values.GetLength(0) && x + 1 < values.GetLength(1))
+                    {
+                        bool isSquare = true;
+                        string currentValue = values[i, x];
+                        if(values[i,x + 1] == currentValue &&
+                            values[i + 1,x + 1] == currentValue &&
+                            values[i + 1, x] == currentValue)
+                        {
+                            squares += 1;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(squares);
+        }
+    }
+}
