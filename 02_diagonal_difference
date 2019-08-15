@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace _02_diagonal_difference
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int nLines = int.Parse(Console.ReadLine());
+            int[,] numbers = new int[nLines, nLines];
+            //read from the console numbers and add them to array
+            for (int i = 0; i < nLines; i++)
+            {
+                int[] temp = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+                for (int x = 0; x < temp.Length; x++)
+                {
+                    numbers[i, x] = temp[x];
+                }
+            }
+
+            //Sum and print
+            int sumLeft = 0;
+            int sumRight = 0;
+            for (int left = 0; left < numbers.GetLength(0); left++)
+            {
+                sumLeft += numbers[left, left];
+            }
+            int coutner = 0;
+            for (int right = numbers.GetLength(0) - 1; right >= 0; right--)
+            {
+                sumRight += numbers[coutner, right];
+                coutner++;
+            }
+            // Calculate absolute difference
+            int absDifference = Math.Abs(sumLeft - sumRight);
+            Console.WriteLine(absDifference);
+        }
+    }
+}
