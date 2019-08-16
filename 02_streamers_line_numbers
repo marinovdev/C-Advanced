@@ -1,0 +1,35 @@
+using System;
+using System.IO;
+
+namespace _02_streamers_line_numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //The program reads all lines from read.txt and writes them in write.txt
+            // with Line {n}: preffix for each line
+            string fileToRead = "read.txt";
+            string fileToWrite = "write.txt";
+
+            StreamReader reader = new StreamReader(fileToRead);
+            StreamWriter writer = new StreamWriter(fileToWrite);
+            using (reader)
+            {
+                using (writer)
+                {
+                    int counter = 1;
+                    string currentLine = reader.ReadLine();
+                    while(currentLine != null)
+                    {
+                        string newLine = $"Line {counter}:{currentLine}";
+                        writer.WriteLine(newLine);
+                        counter++;
+                        currentLine = reader.ReadLine();
+                    }
+                }
+            }
+
+        }
+    }
+}
