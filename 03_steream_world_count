@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
+namespace _03_steream_world_count
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //file paths
+            string wordsPath = "words.txt";
+            string textPath = "text.txt";
+            string resultPath = "result.txt";
+
+            // operation with each file
+            StreamReader words = new StreamReader(wordsPath);
+            StreamReader text = new StreamReader(textPath);
+            StreamWriter result = new StreamWriter(resultPath);
+            // text is temporary stored in list
+            List<string> wordsToSearch = new List<string>();
+            Dictionary<string, int> wordsFound = new Dictionary<string, int>();
+            
+            using (words)
+            {
+                string line = words.ReadLine();
+                while(line != null)
+                {
+                    wordsToSearch.Add(line);
+                    line = words.ReadLine();
+                }
+            }
+            using (text)
+            {
+                string line = text.ReadLine().ToLower();
+                while (line != null)
+                {
+                    foreach (var item in wordsToSearch)
+                    {
+                        string wordMatch = item.ToLower();
+                        if(line.Contains(wordMatch))
+                        {
+                            if(!wordsFound.ContainsKey(wordMatch))
+                            {
+                                wordsFound.Add(wordMatch, 0);
+                            }
+                            wordsFound[wordMatch]++;
+                        }
+                    }
+                    line = text.ReadLine();
+                }
+            }
+            using (result)
+            {
+                foreach (var item in wordsFound.OrderByDescending(x => x.Value))
+                {
+                    string resultLine = $"{item.Key} - {item.Value}";
+                    result.WriteLine(resultLine);
+                }
+            }
+        }
+    }
+}
