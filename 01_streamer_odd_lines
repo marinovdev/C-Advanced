@@ -1,0 +1,28 @@
+using System;
+using System.IO;
+
+namespace _01_streamer_odd_lines
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string fileName = "read.txt";
+            StreamReader reader = new StreamReader(fileName);
+            using (reader)
+            {
+                int counter = 0;
+                string readLine = reader.ReadLine();
+                while (readLine != null)
+                {
+                    if (counter % 2 == 1)
+                    {
+                        Console.WriteLine(readLine);
+                    }
+                    counter++;
+                    readLine = reader.ReadLine();
+                }
+            }
+        }
+    }
+}
