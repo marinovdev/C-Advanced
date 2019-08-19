@@ -1,0 +1,18 @@
+using System;
+using System.Linq;
+
+namespace _01_sort_even_numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(String.Join(", ", Console.ReadLine()
+                .Split(", ")
+                .Select(x => int.Parse(x))
+                .Where(x => x % 2 == 0)
+                .OrderBy(x => x)
+                    ));
+        }
+    }
+}
