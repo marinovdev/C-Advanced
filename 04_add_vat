@@ -1,0 +1,23 @@
+using System;
+using System.Linq;
+
+namespace _04_add_vat
+{
+    class AddVat
+    {
+        static void Main(string[] args)
+        {
+            Func<double, double> addVat = x => x * 1.2;
+            double[] pricesWithVat = Console.ReadLine()
+                .Split(", ")
+                .Select(double.Parse)
+                .Select(addVat)
+                .ToArray()
+                ;
+            foreach (var item in pricesWithVat)
+            {
+                Console.WriteLine(string.Format("{0:0.00}", item));
+            }
+        }
+    }
+}
