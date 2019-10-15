@@ -1,0 +1,11 @@
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\bin\Debug\netcoreapp2.1\06-speed-racing.deps.json
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\bin\Debug\netcoreapp2.1\06-speed-racing.runtimeconfig.json
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\bin\Debug\netcoreapp2.1\06-speed-racing.runtimeconfig.dev.json
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\bin\Debug\netcoreapp2.1\06-speed-racing.dll
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\bin\Debug\netcoreapp2.1\06-speed-racing.pdb
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\obj\Debug\netcoreapp2.1\06-speed-racing.csprojAssemblyReference.cache
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\obj\Debug\netcoreapp2.1\06-speed-racing.csproj.CoreCompileInputs.cache
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\obj\Debug\netcoreapp2.1\06-speed-racing.AssemblyInfoInputs.cache
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\obj\Debug\netcoreapp2.1\06-speed-racing.AssemblyInfo.cs
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\obj\Debug\netcoreapp2.1\06-speed-racing.dll
+C:\Users\Infinity\source\repos\c-advanced\06-speed-racing\obj\Debug\netcoreapp2.1\06-speed-racing.pdb
