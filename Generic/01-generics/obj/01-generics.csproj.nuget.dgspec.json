@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Infinity\\source\\repos\\c-advanced-classes\\01-generics\\01-generics.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Infinity\\source\\repos\\c-advanced-classes\\01-generics\\01-generics.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Infinity\\source\\repos\\c-advanced-classes\\01-generics\\01-generics.csproj",
+        "projectName": "01-generics",
+        "projectPath": "C:\\Users\\Infinity\\source\\repos\\c-advanced-classes\\01-generics\\01-generics.csproj",
+        "packagesPath": "C:\\Users\\Infinity\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Infinity\\source\\repos\\c-advanced-classes\\01-generics\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Infinity\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/vyfullspam50/_packaging/vyfullspam50/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

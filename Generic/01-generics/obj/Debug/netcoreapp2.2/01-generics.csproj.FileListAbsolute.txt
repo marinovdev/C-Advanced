@@ -1,0 +1,11 @@
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\bin\Debug\netcoreapp2.2\01-generics.deps.json
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\bin\Debug\netcoreapp2.2\01-generics.runtimeconfig.json
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\bin\Debug\netcoreapp2.2\01-generics.runtimeconfig.dev.json
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\bin\Debug\netcoreapp2.2\01-generics.dll
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\bin\Debug\netcoreapp2.2\01-generics.pdb
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\obj\Debug\netcoreapp2.2\01-generics.csprojAssemblyReference.cache
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\obj\Debug\netcoreapp2.2\01-generics.csproj.CoreCompileInputs.cache
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\obj\Debug\netcoreapp2.2\01-generics.AssemblyInfoInputs.cache
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\obj\Debug\netcoreapp2.2\01-generics.AssemblyInfo.cs
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\obj\Debug\netcoreapp2.2\01-generics.dll
+C:\Users\Infinity\source\repos\c-advanced-classes\01-generics\obj\Debug\netcoreapp2.2\01-generics.pdb
